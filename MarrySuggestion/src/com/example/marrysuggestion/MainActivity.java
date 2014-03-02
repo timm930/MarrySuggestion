@@ -5,6 +5,7 @@ import android.app.Activity;
 //import android.view.Menu;
 import android.view.View;
 import android.widget.*;
+import android.util.*;
 
 public class MainActivity extends Activity {
 
@@ -38,19 +39,31 @@ public class MainActivity extends Activity {
     			
     		String strSug = "Result：";
     		if (strSex.equals("male"))
-    			if (iAge < 28)
-    				strSug += "Not hurry";
-    			else if (iAge > 33)
-    				strSug += "Get married";
-    			else
-    				strSug += "Start dating";
+    			if (iAge < 28) {
+    				strSug += "Not hurry!!";
+    				Log.d("MarriSug", "man, Not hurry!!");
+    			}
+    			else if (iAge > 33) {
+    				strSug += "Get married!!";
+    				Log.d("MarriSug", "man, Get married!!");
+    			}
+    			else {
+    				strSug += "Start dating!!";
+    				Log.d("MarriSug", "man, Start dating!!");
+    			}
     		else
-    			if (iAge < 25)
-    				strSug += "Not hurry";
-    			else if (iAge > 30)
-    				strSug += "Get married";
-    			else
-    				strSug += "Start dating";
+    			if (iAge < 25) {
+    				strSug += "Not hurry!!";
+    				Log.d("MarriSug", "man, Not hurry!!");
+    			}
+    			else if (iAge > 30) {
+    				strSug += "Get married!!";
+    				Log.d("MarriSug", "man, Get married!!");
+    			}
+    			else {
+    				strSug += "Start dating!!";
+    				Log.d("MarriSug", "man, Start dating!!");
+    			}
     		
     		//把結果存到txtResult這個TextView
     		txtResult.setText(strSug);
